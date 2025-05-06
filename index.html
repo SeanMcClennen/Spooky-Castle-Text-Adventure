@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Spooky Castle Text Adventure</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.12.2/brython.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3.12.2/brython_stdlib.js"></script>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #111;
+            color: #0f0;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #game-container {
+            width: 80%;
+            max-width: 800px;
+            border: 1px solid #0f0;
+            padding: 15px;
+            margin-bottom: 15px;
+            height: 500px; /* Fixed height */
+            overflow-y: auto; /* Scrollable */
+            background-color: #000;
+        }
+        #output {
+            white-space: pre-wrap; /* Preserve whitespace and newlines */
+        }
+        #input-area {
+            display: flex;
+            width: 80%;
+            max-width: 800px;
+        }
+        #command_input {
+            flex-grow: 1;
+            padding: 10px;
+            background-color: #222;
+            color: #0f0;
+            border: 1px solid #0f0;
+            margin-right: 10px;
+        }
+        #submit_button {
+            padding: 10px 15px;
+            background-color: #050;
+            color: #0f0;
+            border: 1px solid #0f0;
+            cursor: pointer;
+        }
+        #submit_button:hover {
+            background-color: #070;
+        }
+        .prompt {
+            color: #ff0; /* Yellow for prompts */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body onload="brython()">
+
+<h1>Spooky Castle Text Adventure</h1>
+
+<div id="game-container">
+    <div id="output"></div>
+</div>
+
+<div id="input-area">
+    <input type="text" id="command_input" placeholder="Enter your command...">
+    <button id="submit_button">Send</button>
+</div>
+
+<script type="text/python" src="Spooky_Castle_Text_Adventure.py"></script>
+
+</body>
+</html>
