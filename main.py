@@ -6,7 +6,7 @@ y = random.randint(0, 9)
 
 map = 0
 gold = 0
-health = 10
+health = 100
 mana = 30
 armor = 0
 weaponcount = 0
